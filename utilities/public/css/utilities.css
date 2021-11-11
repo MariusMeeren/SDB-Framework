@@ -138,6 +138,10 @@
 /*********************/
 /* Light Theme Cards */
 /*********************/
+.card > .card {
+  background-color: var(--clr-light-primary-background);
+}
+
 .card {
   padding: 10px;
   margin: 10px;
@@ -161,6 +165,10 @@
 /* Dark Theme Cards */
 /********************/
 [dark] {
+  background-color: var(--clr-dark-primary-background);
+}
+
+[dark] .card > .card {
   background-color: var(--clr-dark-primary-background);
 }
 

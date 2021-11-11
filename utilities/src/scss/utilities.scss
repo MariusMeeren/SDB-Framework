@@ -8,7 +8,7 @@
 @use "typography" as *;
 @use "grid" as *;
 @use "cards" as *;
-@use 'charts' as *;
+@use "charts" as *;
 
 * {
   margin: 0;
@@ -115,6 +115,11 @@
 /* Light Theme Cards */
 /*********************/
 @each $class, $prop in $lightcards {
+  @if #{$class} == card {
+    .#{$class} > .#{$class} {
+        background-color: var(--clr-light-primary-background);
+    }
+  }
   .#{$class} {
     @each $property, $value in $prop {
       #{$property}: #{$value};
@@ -126,6 +131,11 @@
 /* Dark Theme Cards */
 /********************/
 @each $class, $prop in $darkmode {
+  @if #{$class} == card {
+    [dark] .#{$class} > .#{$class} {
+        background-color: var(--clr-dark-primary-background);
+    }
+  }
   @if #{$class} == dark {
     [#{$class}] {
       @each $property, $value in $prop {
