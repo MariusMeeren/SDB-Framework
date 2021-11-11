@@ -8,6 +8,7 @@
 @use "typography" as *;
 @use "grid" as *;
 @use "cards" as *;
+@use 'charts' as *;
 
 * {
   margin: 0;
@@ -149,4 +150,11 @@
       #{$property}: #{$value};
     }
   }
+}
+
+/**************/
+/* Charts CSS */
+/**************/
+
+@each $class, $prop in $charts {
 }
