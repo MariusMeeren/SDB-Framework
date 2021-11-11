@@ -1,0 +1,152 @@
+/*******************/
+/*  CSS Utilities  */
+/*******************/
+
+@use "palette" as *;
+@use "flex" as *;
+@use "columns" as *;
+@use "typography" as *;
+@use "grid" as *;
+@use "cards" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Palette */
+  @each $category, $color in $palette {
+    @each $shade, $value in $color {
+      --clr-#{$category}-#{$shade}: #{$value};
+    }
+  }
+
+  /*****************/
+  /* Font Families */
+  /*****************/
+  @each $family, $value in $typography {
+    @if $family == "styles" {
+    } @else {
+      --font-#{$family}: "#{$family}", sans-serif;
+    }
+  }
+}
+
+/******************/
+/* Typography CSS */
+/******************/
+@each $font, $props in $typography {
+  @each $prop, $value in $props {
+    @if $prop == "italic" {
+      .#{$prop} {
+        font-style: #{$value};
+      }
+    } @else if $prop == "uppercase" {
+      .text-#{$prop} {
+        text-transform: #{$value};
+      }
+    } @else {
+      .text-#{"" + $prop} {
+        font-weight: #{$value};
+      }
+    }
+  }
+}
+
+/***************/
+/* Flexbox CSS */
+/***************/
+@each $class, $prop in $flex-classes {
+  @if #{$class} == flex {
+    .#{$class} {
+      @each $property, $value in $prop {
+        #{$property}: #{$value};
+      }
+    }
+  } @else if #{$class} == space-between {
+    .#{$class} {
+      @each $property, $value in $prop {
+        #{$property}: #{$value};
+      }
+    }
+  } @else {
+    .flex-#{$class} {
+      @each $property, $value in $prop {
+        #{$property}: #{$value};
+      }
+    }
+  }
+}
+
+/***************/
+/* Columns CSS */
+/***************/
+@each $class, $prop in $columns {
+  .#{$class} {
+    @each $property, $value in $prop {
+      #{$property}: #{$value};
+    }
+  }
+}
+
+/************/
+/* Grid CSS */
+/************/
+@each $class, $prop in $gridbox {
+  @if #{$class} == grid {
+    .#{$class} {
+      @each $property, $value in $prop {
+        #{$property}: #{$value};
+      }
+    }
+  } @else {
+    .grid-#{$class} {
+      @each $property, $value in $prop {
+        #{$property}: #{$value};
+      }
+    }
+  }
+}
+
+/*********************/
+/* Light Theme Cards */
+/*********************/
+@each $class, $prop in $lightcards {
+  .#{$class} {
+    @each $property, $value in $prop {
+      #{$property}: #{$value};
+    }
+  }
+}
+
+/********************/
+/* Dark Theme Cards */
+/********************/
+@each $class, $prop in $darkmode {
+  @if #{$class} == dark {
+    [#{$class}] {
+      @each $property, $value in $prop {
+        #{$property}: #{$value};
+      }
+    }
+  } @else {
+    [dark] .#{$class} {
+      @each $property, $value in $prop {
+        #{$property}: #{$value};
+      }
+    }
+  }
+}
+
+/*****************************/
+/* Universal Card Properties */
+/*****************************/
+@each $class, $prop in $universalcards {
+  .#{$class} {
+    @each $property, $value in $prop {
+      #{$property}: #{$value};
+    }
+  }
+}

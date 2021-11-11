@@ -1,0 +1,9 @@
+$grid-repeat: '1, 1fr';
+$gridbox: (
+    grid: (
+        display: 'grid',
+    ),
+    template: (
+        grid-template-columns: repeat($grid-repeat),
+    ),
+);

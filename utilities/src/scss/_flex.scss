@@ -1,0 +1,21 @@
+$flex-classes: (
+  flex: (
+    display: 'flex',
+  ),
+  row: (
+    flex-direction: 'row',
+  ),
+  column: (
+    flex-direction: 'column',
+  ),
+  grow: (
+    flex-grow: '1',
+  ),
+  wrap: (
+    flex-wrap: 'wrap',
+  ),
+  space-between: (
+    justify-content: 'space-between',
+  ),
+
+);

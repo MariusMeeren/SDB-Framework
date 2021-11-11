@@ -1,0 +1,6 @@
+@import url(../public/css/utilities.css);
+
+body {
+    background-color: var(--clr-light-primary-background);
+    font-family: var(--font-poppins);
+}

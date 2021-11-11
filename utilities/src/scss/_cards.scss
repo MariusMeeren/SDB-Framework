@@ -1,0 +1,44 @@
+$lightcards: (
+    card: (
+        padding: '10px',
+        margin: '10px',
+        background-color: 'var(--clr-light-primary-overlay)',
+    ),
+    card-header: (
+        margin: '10px',
+    ),
+    card-title: (
+        color: 'var(--clr-light-primary-titles)',
+    ),
+    card-body: (
+        padding: '10px',
+        background-color: 'var(--clr-light-primary-background)',
+    ),
+);
+
+$darkmode: (
+    dark: (
+        background-color: 'var(--clr-dark-primary-background)',
+    ),
+    card: (
+        background-color: 'var(--clr-dark-primary-overlay)',
+    ),
+    card-title: (
+        color: 'var(--clr-dark-primary-text)',
+    ),
+    card-body: (
+        background-color: 'var(--clr-dark-primary-background)',
+    ),
+);
+
+$universalcards: (
+    sm-rounded: (
+        border-radius: '5px',
+    ),
+    md-rounded: (
+        border-radius: '10px',
+    ),
+    lg-rounded: (
+        border-radius: '15px',
+    ),
+);
