@@ -74,7 +74,7 @@
       }
     }
   } @else {
-    .flex-#{$class} {
+    .#{$class} {
       @each $property, $value in $prop {
         #{$property}: #{$value};
       }
@@ -173,9 +173,9 @@
 @include mq(medium) {
   @each $class, $prop in $flex-classes {
     @each $property, $value in $prop {
-      @if #{$class} == column {
+      @if #{$class} == row {
         .#{$class} {
-          #{$property}: #{$value};
+          #{$property}: column;
         }
       }
     }
@@ -193,9 +193,9 @@
 @include mq(small) {
   @each $class, $prop in $flex-classes {
     @each $property, $value in $prop {
-      @if #{$class} == column {
+      @if #{$class} == row {
         .#{$class} {
-          #{$property}: #{$value};
+          #{$property}: column;
         }
       }
     }

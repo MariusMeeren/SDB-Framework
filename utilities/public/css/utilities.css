@@ -76,24 +76,24 @@
   display: flex;
 }
 
-.flex-row {
+.row {
   flex-direction: row;
 }
 
-.flex-center {
+.center {
   margin-left: auto;
   margin-right: auto;
 }
 
-.flex-column {
+.column {
   flex-direction: column;
 }
 
-.flex-grow {
+.grow {
   flex-grow: 1;
 }
 
-.flex-wrap {
+.wrap {
   flex-wrap: wrap;
 }
 
@@ -220,7 +220,7 @@
 /*****************/
 /* Max-Width 65em */
 @media only screen and (max-width: 65em) {
-  .column {
+  .row {
     flex-direction: column;
   }
 
@@ -256,7 +256,7 @@
 }
 /* Max-Width 40em */
 @media only screen and (max-width: 40em) {
-  .column {
+  .row {
     flex-direction: column;
   }
 
