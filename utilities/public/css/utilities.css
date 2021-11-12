@@ -12,16 +12,21 @@
 
 :root {
   /* Palette */
-  --clr-light-primary-background: #f4f6fb;
+  --clr-light-primary-background: #e9eaec;
   --clr-light-primary-overlay: white;
   --clr-light-primary-titles: black;
   --clr-light-secondary-background: #eff1f5;
   --clr-light-secondary-overlay: white;
   --clr-light-secondary-titles: #173254;
-  --clr-dark-primary-background: #323743;
-  --clr-dark-primary-overlay: #272b34;
+  --clr-dark-primary-background: #274754;
+  --clr-dark-primary-overlay: #2a3037;
   --clr-dark-primary-text: #b1b8be;
   --clr-dark-primary-navigation: #2c3e4e;
+  --clr-dark-secondary-background: #323743;
+  --clr-dark-secondary-overlay: #272b34;
+  --clr-dark-secondary-text: #b1b8be;
+  --clr-dark-secondary-navigation: #2c3e4e;
+  --clr-extra-error: #fb3741;
   /*****************/
   /* Font Families */
   /*****************/
@@ -73,6 +78,11 @@
 
 .flex-row {
   flex-direction: row;
+}
+
+.flex-center {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .flex-column {
@@ -138,6 +148,7 @@
 /*********************/
 /* Light Theme Cards */
 /*********************/
+/* If parent card has a child card */
 .card > .card {
   background-color: var(--clr-light-primary-background);
 }
@@ -168,6 +179,7 @@
   background-color: var(--clr-dark-primary-background);
 }
 
+/* If parent card has a child card */
 [dark] .card > .card {
   background-color: var(--clr-dark-primary-background);
 }
@@ -188,19 +200,105 @@
 /* Universal Card Properties */
 /*****************************/
 .sm-rounded {
-  border-radius: 5px;
+  border-radius: .125rem;
 }
 
 .md-rounded {
-  border-radius: 10px;
+  border-radius: .375rem;
 }
 
 .lg-rounded {
-  border-radius: 15px;
+  border-radius: 0.5rem;
 }
 
+.shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+/*****************/
+/* Media Queries */
+/*****************/
+/* Max-Width 65em */
+@media only screen and (max-width: 65em) {
+  .column {
+    flex-direction: column;
+  }
+
+  .column25 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .column33 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .column50 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .column66 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .column75 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .column100 {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+/* Max-Width 40em */
+@media only screen and (max-width: 40em) {
+  .column {
+    flex-direction: column;
+  }
+
+  .column25 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .column33 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .column50 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .column66 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .column75 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .column100 {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
 /**************/
 /* Charts CSS */
 /**************/
+.pie-chart {
+  background: conic-gradient(#F15854 4%, #4D4D4D 0 8%, #5DA5DA 0 17%, #DECF3F 0 48%, #B276B2 0 59%, #FAA43A 0);
+  border-radius: 50%;
+  width: 50%;
+  padding-top: 50%;
+  margin: 2.5em auto;
+}
 
 /*# sourceMappingURL=utilities.css.map */

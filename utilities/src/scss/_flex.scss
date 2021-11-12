@@ -5,6 +5,10 @@ $flex-classes: (
   row: (
     flex-direction: 'row',
   ),
+  center: (
+    margin-left: 'auto',
+    margin-right: 'auto',
+  ),
   column: (
     flex-direction: 'column',
   ),
@@ -17,5 +21,4 @@ $flex-classes: (
   space-between: (
     justify-content: 'space-between',
   ),
-
 );

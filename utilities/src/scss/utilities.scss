@@ -9,6 +9,7 @@
 @use "grid" as *;
 @use "cards" as *;
 @use "charts" as *;
+@use "media-query" as *;
 
 * {
   margin: 0;
@@ -116,8 +117,9 @@
 /*********************/
 @each $class, $prop in $lightcards {
   @if #{$class} == card {
+    /* If parent card has a child card */
     .#{$class} > .#{$class} {
-        background-color: var(--clr-light-primary-background);
+      background-color: var(--clr-light-primary-background);
     }
   }
   .#{$class} {
@@ -132,8 +134,9 @@
 /********************/
 @each $class, $prop in $darkmode {
   @if #{$class} == card {
+    /* If parent card has a child card */
     [dark] .#{$class} > .#{$class} {
-        background-color: var(--clr-dark-primary-background);
+      background-color: var(--clr-dark-primary-background);
     }
   }
   @if #{$class} == dark {
@@ -162,9 +165,59 @@
   }
 }
 
+/*****************/
+/* Media Queries */
+/*****************/
+
+/* Max-Width 65em */
+@include mq(medium) {
+  @each $class, $prop in $flex-classes {
+    @each $property, $value in $prop {
+      @if #{$class} == column {
+        .#{$class} {
+          #{$property}: #{$value};
+        }
+      }
+    }
+  }
+
+  @each $class, $prop in $columns {
+    .#{$class} {
+      @each $property, $value in $prop {
+        #{$property}: 100%;
+      }
+    }
+  }
+}
+/* Max-Width 40em */
+@include mq(small) {
+  @each $class, $prop in $flex-classes {
+    @each $property, $value in $prop {
+      @if #{$class} == column {
+        .#{$class} {
+          #{$property}: #{$value};
+        }
+      }
+    }
+  }
+
+  @each $class, $prop in $columns {
+    .#{$class} {
+      @each $property, $value in $prop {
+        #{$property}: 100%;
+      }
+    }
+  }
+}
+
 /**************/
 /* Charts CSS */
 /**************/
 
 @each $class, $prop in $charts {
+  .#{$class}-chart {
+    @each $property, $value in $prop {
+      #{$property}: #{$value};
+    }
+  }
 }
