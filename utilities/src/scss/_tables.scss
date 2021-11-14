@@ -1,0 +1,26 @@
+$tables: (
+    table: (
+        display: table,
+        color: var(--clr-dark-primary-text),
+        width: 100%,
+        border-radius: 10px,
+        border-collapse: collapse,
+        box-shadow: "0 4px 10px rgb(0 0 0 / 1%)",
+        overflow: hidden,
+    ),
+    thead: (
+        background-color: var(--clr-dark-primary-background),
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2),
+    ),
+    td: (
+        padding: 0.5em,
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2),
+    ),
+    th: (
+        padding: 0.5em,
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2),
+    ),
+    condensed: (
+        padding: 0.2em,
+    ),
+);

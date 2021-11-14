@@ -10,6 +10,8 @@
 @use "cards" as *;
 @use "charts" as *;
 @use "media-query" as *;
+@use "forms" as *;
+@use "tables" as *;
 
 * {
   margin: 0;
@@ -34,6 +36,46 @@
       --font-#{$family}: "#{$family}", sans-serif;
     }
   }
+}
+
+/* Light Mode Input */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  display: block;
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  background: var(--clr-light-primary-background);
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 1%);
+}
+
+/* Dark Mode Input */
+[dark] input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  display: block;
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  background: var(--clr-dark-primary-background);
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 1%);
 }
 
 /******************/
@@ -118,7 +160,7 @@
 @each $class, $prop in $lightcards {
   @if #{$class} == card {
     /* If parent card has a child card */
-    .#{$class} > .#{$class} {
+    .#{$class}-body > .#{$class} {
       background-color: var(--clr-light-primary-background);
     }
   }
@@ -135,7 +177,7 @@
 @each $class, $prop in $darkmode {
   @if #{$class} == card or #{$class} == card-body {
     /* If parent card has a child card */
-    [dark] .#{$class} > .#{$class} {
+    [dark] .#{$class}-body > .#{$class} {
       background-color: var(--clr-dark-primary-background);
     }
   }
@@ -158,6 +200,17 @@
 /* Universal Card Properties */
 /*****************************/
 @each $class, $prop in $universalcards {
+  .#{$class} {
+    @each $property, $value in $prop {
+      #{$property}: #{$value};
+    }
+  }
+}
+
+/**************/
+/* Tables CSS */
+/**************/
+@each $class, $prop in $tables {
   .#{$class} {
     @each $property, $value in $prop {
       #{$property}: #{$value};

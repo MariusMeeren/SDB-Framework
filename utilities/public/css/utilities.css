@@ -34,6 +34,46 @@
   --font-poppins: "poppins", sans-serif;
 }
 
+/* Light Mode Input */
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+select,
+textarea {
+  display: block;
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  background: var(--clr-light-primary-background);
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+}
+
+/* Dark Mode Input */
+[dark] input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+select,
+textarea {
+  display: block;
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  background: var(--clr-dark-primary-background);
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+}
+
 /******************/
 /* Typography CSS */
 /******************/
@@ -149,7 +189,7 @@
 /* Light Theme Cards */
 /*********************/
 /* If parent card has a child card */
-.card > .card {
+.card-body > .card {
   background-color: var(--clr-light-primary-background);
 }
 
@@ -169,7 +209,6 @@
 
 .card-body {
   padding: 10px;
-  background-color: var(--clr-light-primary-background);
 }
 
 /********************/
@@ -180,7 +219,7 @@
 }
 
 /* If parent card has a child card */
-[dark] .card > .card {
+[dark] .card-body > .card {
   background-color: var(--clr-dark-primary-background);
 }
 
@@ -193,12 +232,12 @@
 }
 
 /* If parent card has a child card */
-[dark] .card-body > .card-body {
+[dark] .card-body-body > .card-body {
   background-color: var(--clr-dark-primary-background);
 }
 
 [dark] .card-body {
-  background-color: var(--clr-dark-primary-background);
+  padding: 10px;
 }
 
 /*****************************/
@@ -218,6 +257,38 @@
 
 .shadow {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+/**************/
+/* Tables CSS */
+/**************/
+.table {
+  display: table;
+  color: var(--clr-dark-primary-text);
+  width: 100%;
+  border-radius: 10px;
+  border-collapse: collapse;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 1%);
+  overflow: hidden;
+}
+
+.thead {
+  background-color: var(--clr-dark-primary-background);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.td {
+  padding: 0.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.th {
+  padding: 0.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.condensed {
+  padding: 0.2em;
 }
 
 /*****************/

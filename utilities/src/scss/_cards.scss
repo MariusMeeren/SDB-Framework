@@ -12,7 +12,6 @@ $lightcards: (
     ),
     card-body: (
         padding: '10px',
-        background-color: 'var(--clr-light-primary-background)',
     ),
 );
 
@@ -27,7 +26,7 @@ $darkmode: (
         color: 'var(--clr-dark-primary-text)',
     ),
     card-body: (
-        background-color: 'var(--clr-dark-primary-background)',
+        padding:'10px',
     ),
 );
 
