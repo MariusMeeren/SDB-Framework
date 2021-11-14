@@ -133,7 +133,7 @@
 /* Dark Theme Cards */
 /********************/
 @each $class, $prop in $darkmode {
-  @if #{$class} == card {
+  @if #{$class} == card or #{$class} == card-body {
     /* If parent card has a child card */
     [dark] .#{$class} > .#{$class} {
       background-color: var(--clr-dark-primary-background);

@@ -192,6 +192,11 @@
   color: var(--clr-dark-primary-text);
 }
 
+/* If parent card has a child card */
+[dark] .card-body > .card-body {
+  background-color: var(--clr-dark-primary-background);
+}
+
 [dark] .card-body {
   background-color: var(--clr-dark-primary-background);
 }
