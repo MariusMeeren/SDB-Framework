@@ -39,14 +39,9 @@
 }
 
 /* Light Mode Input */
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="number"],
-select,
-textarea {
+.text-input {
   display: block;
-  width: 300px;
+  width: 95%;
   height: 40px;
   padding: 10px;
   border-radius: 5px;
@@ -55,27 +50,52 @@ textarea {
   outline: none;
   color: #fff;
   font-size: 14px;
-  box-shadow: 0 4px 10px rgb(0 0 0 / 1%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
 }
 
 /* Dark Mode Input */
-[dark] input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="number"],
-select,
-textarea {
-  display: block;
-  width: 300px;
-  height: 40px;
-  padding: 10px;
-  border-radius: 5px;
+[dark] .text-input {
   background: var(--clr-dark-primary-background);
-  border: none;
-  outline: none;
-  color: #fff;
-  font-size: 14px;
-  box-shadow: 0 4px 10px rgb(0 0 0 / 1%);
+}
+
+.textarea {
+  height: 150px;
+}
+
+.size-check {
+  -webkit-appearance: none;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: 3px solid var(--clr-light-primary-background);
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  position: relative;
+  color:var(--clr-light-primary-titles);
+}
+
+[dark] .size-check {
+  border: 3px solid var(--clr-dark-primary-background);
+  color:var(--clr-dark-primary-text);
+}
+
+.size-check::after {
+  content: attr(value);
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.size-check:checked {
+  background-color: var(--clr-light-primary-background);
+}
+
+[dark] .size-check:checked {
+  background-color: var(--clr-dark-primary-background);
 }
 
 /******************/
@@ -211,9 +231,50 @@ textarea {
 /* Tables CSS */
 /**************/
 @each $class, $prop in $tables {
-  .#{$class} {
-    @each $property, $value in $prop {
-      #{$property}: #{$value};
+  @if #{$class} == darktd {
+    [dark] .td {
+      @each $property, $value in $prop {
+        #{$property}: #{$value};
+      }
+    }
+  }  @else if #{$class} == darktable {
+    [dark] .table {
+      @each $property, $value in $prop {
+        #{$property}: #{$value};
+      }
+    } 
+  } @else if #{$class} == darkthead {
+    [dark] .thead {
+      @each $property, $value in $prop {
+        #{$property}: #{$value};
+      }
+    }
+  } @else {
+    .#{$class} {
+      @each $property, $value in $prop {
+        #{$property}: #{$value};
+      }
+    }
+  }
+}
+
+/*************/
+/* Forms CSS */
+/*************/
+@each $class, $prop in $forms {
+  @if (str-index(#{$class}, "-dark")!=null) {
+    // Remove -dark from #{$class}
+    $replaced: str-replace($class, "-dark", "");
+    [dark] #{$replaced} {
+      @each $property, $value in $prop {
+        #{$property}: #{$value};
+      }
+    }
+  } @else {
+    .#{$class} {
+      @each $property, $value in $prop {
+        #{$property}: #{$value};
+      }
     }
   }
 }

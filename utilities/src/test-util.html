@@ -12,31 +12,71 @@
 
 <body dark>
     <div class="flex row space-between">
-        <div class="card md-rounded column33">
+        <div class="card md-rounded col-50">
             <div class="card-title">
-                <h2 class="title">test</h2>
+                <h2 class="title">Form test</h2>
             </div>
-        </div>
-        <div class="card md-rounded column33">
-            <div class="card-title">
-                <h2 class="title">test</h2>
-            </div>
-        </div>
-        <div class="card md-rounded column33">
-            <div class="card-title">
-                <h2 class="title">test</h2>
-            </div>
-            <div class="card-body md-rounded flex row">
-                    <div class="card md-rounded column50">
-                        <div class="card-title">
-                            <h2 class="title">test</h2>
+
+            <div class="card-body">
+                <h2 class="body-title">Test</h2>
+                <form class="flex column wrap">
+                    <div class="flex row space-between col-100">
+                        <!-- Column 1 -->
+                        <div class="flex column col-50">
+                            <label for="name">Name</label>
+                            <input class="text-input" type="text" id="name" name="name">
+
+                            <label for="price">Price</label>
+                            <input class="text-input" type="number" id="price" name="price">
+
+                            <label for="desc">Description</label>
+                            <textarea class="text-input textarea" type="text" id="desc" name="desc"></textarea>
+                        </div>
+                        <!-- Column 2 -->
+                        <div class="flex column col-50">
+                            <label for="category">Category</label>
+                            <select class="text-input" type="text" id="category" name="category">
+                                <option value="">-- Please choose --</option>
+                                <option value="1">Streamere</option>
+                                <option value="2">Hettegensere</option>
+                                <option value="3">Stickers</option>
+                            </select>
+
+                            <label for="sizes">Sizes Available</label>
+                                <div class="sizes">
+                                    <input type="checkbox" class="size-check" id="xs" name="xs" value="xs">
+                                    <input type="checkbox" class="size-check" id="s" name="s" value="s">
+                                    <input type="checkbox" class="size-check" id="m" name="m" value="m">
+                                    <input type="checkbox" class="size-check" id="l" name="l" value="l">
+                                    <input type="checkbox" class="size-check" id="xl" name="xl" value="xl">
+                                    <input type="checkbox" class="size-check" id="xxl" name="xxl" value="xxl">
+                                </div>
+                                
+                            <label for="name">Display Image</label>
+                            <input class="text-input" type="text" id="name" name="name">
+
+                            <div class="upload">
+                                <input type="file" class="fileupload" id="first" hidden="">
+                                <label for="first" class="upload-img"></label>
+
+                                <input type="file" class="fileupload" id="second" hidden="">
+                                <label for="second" class="upload-img"></label>
+
+                                <input type="file" class="fileupload" id="third" hidden="">
+                                <label for="third" class="upload-img"></label>
+                            </div>
                         </div>
                     </div>
-                    <div class="card md-rounded column50">
-                        <div class="card-title">
-                            <h2 class="title">test</h2>
-                        </div>
-                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card md-rounded col-50">
+            <div class="card-title">
+                <h2 class="title">Form Test 2</h2>
+            </div>
+
+            <div class="card-body">
+                <h2 class="body-title">Test</h2>
             </div>
         </div>
     </div>

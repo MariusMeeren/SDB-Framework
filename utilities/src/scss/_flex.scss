@@ -21,4 +21,13 @@ $flex-classes: (
   space-between: (
     justify-content: 'space-between',
   ),
+  space-evenly: (
+    justify-content: 'space-evenly',
+  ),
+  flex-0: (
+    flex: '0!important',
+  ),
+  flex-1: (
+    flex: '1',
+  ),
 );

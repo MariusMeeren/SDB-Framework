@@ -1,6 +1,15 @@
 $tables: (
     table: (
         display: table,
+        color: var(--clr-light-primary-text),
+        width: 100%,
+        border-radius: 10px,
+        border-collapse: collapse,
+        box-shadow: "0 4px 10px rgb(0 0 0 / 1%)",
+        overflow: hidden,
+    ),
+    darktable: (
+        display: table,
         color: var(--clr-dark-primary-text),
         width: 100%,
         border-radius: 10px,
@@ -9,12 +18,20 @@ $tables: (
         overflow: hidden,
     ),
     thead: (
+        background-color: var(--clr-light-primary-background),
+        border-bottom: 1px solid rgba(000, 000, 000, 0.2),
+    ),
+    darkthead: (
         background-color: var(--clr-dark-primary-background),
         border-bottom: 1px solid rgba(255, 255, 255, 0.2),
     ),
     td: (
         padding: 0.5em,
         border-bottom: 1px solid rgba(255, 255, 255, 0.2),
+    ),
+    darktd: (
+        color: var(--clr-dark-primary-text),
+        border-bottom: 1px solid rgba(000, 000, 000, 0.2),
     ),
     th: (
         padding: 0.5em,
