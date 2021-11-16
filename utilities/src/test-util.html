@@ -18,7 +18,6 @@
             </div>
 
             <div class="card-body">
-                <h2 class="body-title">Test</h2>
                 <form class="flex column wrap">
                     <div class="flex row space-between col-100">
                         <!-- Column 1 -->
@@ -43,30 +42,41 @@
                             </select>
 
                             <label class="form-label" for="sizes">Sizes Available</label>
-                                <div class="sizes col-66 flex-0">
-                                    <input type="checkbox" class="form-checkbox" id="xs" name="xs" value="xs">
-                                    <input type="checkbox" class="form-checkbox" id="s" name="s" value="s">
-                                    <input type="checkbox" class="form-checkbox" id="m" name="m" value="m">
-                                    <input type="checkbox" class="form-checkbox" id="l" name="l" value="l">
-                                    <input type="checkbox" class="form-checkbox" id="xl" name="xl" value="xl">
-                                    <input type="checkbox" class="form-checkbox" id="xxl" name="xxl" value="xxl">
-                                </div>
-                                
-                            <label class="form-label" for="name">Display Image</label>
-                            <input class="form-input" type="text" id="name" name="name">
+                            <div class="sizes flex flex-0">
+                                <input type="checkbox" class="form-checkbox" id="xs" name="xs" value="xs">
+                                <input type="checkbox" class="form-checkbox" id="s" name="s" value="s">
+                                <input type="checkbox" class="form-checkbox" id="m" name="m" value="m">
+                                <input type="checkbox" class="form-checkbox" id="l" name="l" value="l">
+                                <input type="checkbox" class="form-checkbox" id="xl" name="xl" value="xl">
+                                <input type="checkbox" class="form-checkbox" id="xxl" name="xxl" value="xxl">
+                            </div>
 
-                            <div class="form-upload">
-                                <input type="file" class="form-fileupload" id="first" hidden="">
-                                <label for="first" class="upload-img"></label>
+                            <label class="form-label" for="image">Display Image</label>
+                            <input class="form-input" type="text" id="image" name="image">
 
-                                <input type="file" class="form-fileupload" id="second" hidden="">
-                                <label for="second" class="upload-img"></label>
+                            <label class="form-label" for="upload">Images</label>
+                            <div class="form-upload" name="upload" id="upload">
+                                <input type="file" class="form-file" id="first" hidden="">
+                                <label for="first" class="form-upload-label"></label>
 
-                                <input type="file" class="form-fileupload" id="third" hidden="">
-                                <label for="third" class="upload-img"></label>
+                                <input type="file" class="form-file" id="second" hidden="">
+                                <label for="second" class="form-upload-label"></label>
+
+                                <input type="file" class="form-file" id="third" hidden="">
+                                <label for="third" class="form-upload-label"></label>
+
+                                <input type="file" class="form-file" id="first" hidden="">
+                                <label for="first" class="form-upload-label"></label>
+
+                                <input type="file" class="form-file" id="second" hidden="">
+                                <label for="second" class="form-upload-label"></label>
+
+                                <input type="file" class="form-file" id="third" hidden="">
+                                <label for="third" class="form-upload-label"></label>
                             </div>
                         </div>
                     </div>
+                    <button type="submit" class="form-submit center">Add</button>
                 </form>
             </div>
         </div>

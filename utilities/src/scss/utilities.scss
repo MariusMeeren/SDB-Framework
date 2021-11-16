@@ -224,7 +224,25 @@
       }
     }
   } @else if (str-index(#{$class}, "-after") !=null) {
-    $after: str-replace($class, "-after", "::after");
+    $after: str-replace($class, "-after", ":after");
+    .#{$after} {
+      @each $property, $value in $prop {
+        #{$property}: #{$value};
+      }
+    }
+  } @else if (str-index(#{$class}, "-before") !=null) {
+    $after: str-replace($class, "-before", ":before");
+    .#{$after} {
+      @each $property, $value in $prop {
+        @if $property == content {
+          #{$property}: '#{$value}';
+        } @else  {
+          #{$property}: #{$value};
+        }
+      }
+    }
+  } @else if (str-index(#{$class}, "-hover") !=null) {
+    $after: str-replace($class, "-hover", ":hover");
     .#{$after} {
       @each $property, $value in $prop {
         #{$property}: #{$value};

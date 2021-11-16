@@ -1,9 +1,12 @@
-$grid-repeat: '1, 1fr';
+$grid-repeat: 3, 100px;
 $gridbox: (
     grid: (
         display: 'grid',
     ),
     template: (
         grid-template-columns: repeat($grid-repeat),
+    ),
+    gap: (
+        grid-gap: '0.5em',
     ),
 );

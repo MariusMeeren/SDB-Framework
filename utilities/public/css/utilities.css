@@ -154,7 +154,11 @@
 }
 
 .grid-template {
-  grid-template-columns: repeat("1, 1fr");
+  grid-template-columns: repeat(3, 100px);
+}
+
+.grid-gap {
+  grid-gap: 0.5em;
 }
 
 /*********************/
@@ -288,6 +292,7 @@
 /*************/
 .form-label {
   color: var(--clr-light-primary-titles);
+  margin-top: 1em;
 }
 
 [dark] .form-label {
@@ -297,7 +302,6 @@
 .form-input {
   display: block;
   width: 95%;
-  height: 40px;
   padding: 10px;
   border-radius: 5px;
   background: var(--clr-light-primary-background);
@@ -313,18 +317,17 @@
 }
 
 .form-textarea {
-  height: 150px;
+  height: 100%;
   resize: none;
 }
 
 .form-checkbox {
   -webkit-appearance: none;
   width: 100px;
-  height: 40px;
+  height: 35px;
   border-radius: 5px;
   border: 3px solid var(--clr-light-primary-background);
   cursor: pointer;
-  margin-bottom: 10px;
   margin-right: 10px;
   position: relative;
   color: var(--clr-light-primary-titles);
@@ -335,7 +338,7 @@
   color: var(--clr-dark-primary-text);
 }
 
-.form-checkbox::after {
+.form-checkbox:after {
   content: attr(value);
   position: absolute;
   top: 50%;
@@ -350,7 +353,57 @@
 }
 
 [dark] .form-checkbox:checked {
-  background-color: var(--clr-dark-primary-background);
+  background-color: var(--clr-dark-primary-navigation);
+  border: 3px solid var(--clr-dark-primary-navigation);
+}
+
+.form-submit {
+  display: block;
+  cursor: pointer;
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  margin-top: 1em;
+  border-radius: 5px;
+  background: var(--clr-dark-primary-background);
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  color: #ffff;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+}
+
+.form-upload {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 0.5em;
+}
+
+.form-upload-label {
+  width: 100%;
+  height: 100px;
+  background: var(--clr-dark-primary-background);
+  cursor: pointer;
+  background-size: cover;
+  transition: background 0.2s ease;
+  border-radius: 5px;
+}
+
+.form-upload-label:before {
+  content: "Upload Here";
+  max-width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: var(--clr-dark-primary-text);
+}
+
+.form-upload-label:hover {
+  background: var(--clr-dark-secondary-background);
 }
 
 /*****************/
