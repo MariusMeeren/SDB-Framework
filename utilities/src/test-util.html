@@ -23,46 +23,46 @@
                     <div class="flex row space-between col-100">
                         <!-- Column 1 -->
                         <div class="flex column col-50">
-                            <label for="name">Name</label>
-                            <input class="text-input" type="text" id="name" name="name">
+                            <label class="form-label" for="name">Name</label>
+                            <input class="form-input" type="text" id="name" name="name">
 
-                            <label for="price">Price</label>
-                            <input class="text-input" type="number" id="price" name="price">
+                            <label class="form-label" for="price">Price</label>
+                            <input class="form-input" type="number" id="price" name="price">
 
-                            <label for="desc">Description</label>
-                            <textarea class="text-input textarea" type="text" id="desc" name="desc"></textarea>
+                            <label class="form-label" for="desc">Description</label>
+                            <textarea class="form-input form-textarea" type="text" id="desc" name="desc"></textarea>
                         </div>
                         <!-- Column 2 -->
                         <div class="flex column col-50">
-                            <label for="category">Category</label>
-                            <select class="text-input" type="text" id="category" name="category">
+                            <label class="form-label" for="category">Category</label>
+                            <select class="form-input" type="text" id="category" name="category">
                                 <option value="">-- Please choose --</option>
                                 <option value="1">Streamere</option>
                                 <option value="2">Hettegensere</option>
                                 <option value="3">Stickers</option>
                             </select>
 
-                            <label for="sizes">Sizes Available</label>
-                                <div class="sizes">
-                                    <input type="checkbox" class="size-check" id="xs" name="xs" value="xs">
-                                    <input type="checkbox" class="size-check" id="s" name="s" value="s">
-                                    <input type="checkbox" class="size-check" id="m" name="m" value="m">
-                                    <input type="checkbox" class="size-check" id="l" name="l" value="l">
-                                    <input type="checkbox" class="size-check" id="xl" name="xl" value="xl">
-                                    <input type="checkbox" class="size-check" id="xxl" name="xxl" value="xxl">
+                            <label class="form-label" for="sizes">Sizes Available</label>
+                                <div class="sizes col-66 flex-0">
+                                    <input type="checkbox" class="form-checkbox" id="xs" name="xs" value="xs">
+                                    <input type="checkbox" class="form-checkbox" id="s" name="s" value="s">
+                                    <input type="checkbox" class="form-checkbox" id="m" name="m" value="m">
+                                    <input type="checkbox" class="form-checkbox" id="l" name="l" value="l">
+                                    <input type="checkbox" class="form-checkbox" id="xl" name="xl" value="xl">
+                                    <input type="checkbox" class="form-checkbox" id="xxl" name="xxl" value="xxl">
                                 </div>
                                 
-                            <label for="name">Display Image</label>
-                            <input class="text-input" type="text" id="name" name="name">
+                            <label class="form-label" for="name">Display Image</label>
+                            <input class="form-input" type="text" id="name" name="name">
 
-                            <div class="upload">
-                                <input type="file" class="fileupload" id="first" hidden="">
+                            <div class="form-upload">
+                                <input type="file" class="form-fileupload" id="first" hidden="">
                                 <label for="first" class="upload-img"></label>
 
-                                <input type="file" class="fileupload" id="second" hidden="">
+                                <input type="file" class="form-fileupload" id="second" hidden="">
                                 <label for="second" class="upload-img"></label>
 
-                                <input type="file" class="fileupload" id="third" hidden="">
+                                <input type="file" class="form-fileupload" id="third" hidden="">
                                 <label for="third" class="upload-img"></label>
                             </div>
                         </div>

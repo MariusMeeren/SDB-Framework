@@ -38,66 +38,6 @@
   }
 }
 
-/* Light Mode Input */
-.text-input {
-  display: block;
-  width: 95%;
-  height: 40px;
-  padding: 10px;
-  border-radius: 5px;
-  background: var(--clr-light-primary-background);
-  border: none;
-  outline: none;
-  color: #fff;
-  font-size: 14px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
-}
-
-/* Dark Mode Input */
-[dark] .text-input {
-  background: var(--clr-dark-primary-background);
-}
-
-.textarea {
-  height: 150px;
-}
-
-.size-check {
-  -webkit-appearance: none;
-  width: 100px;
-  height: 40px;
-  border-radius: 5px;
-  border: 3px solid var(--clr-light-primary-background);
-  cursor: pointer;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  position: relative;
-  color:var(--clr-light-primary-titles);
-}
-
-[dark] .size-check {
-  border: 3px solid var(--clr-dark-primary-background);
-  color:var(--clr-dark-primary-text);
-}
-
-.size-check::after {
-  content: attr(value);
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  font-size: 16px;
-  text-transform: uppercase;
-}
-
-.size-check:checked {
-  background-color: var(--clr-light-primary-background);
-}
-
-[dark] .size-check:checked {
-  background-color: var(--clr-dark-primary-background);
-}
-
 /******************/
 /* Typography CSS */
 /******************/
@@ -237,12 +177,12 @@
         #{$property}: #{$value};
       }
     }
-  }  @else if #{$class} == darktable {
+  } @else if #{$class} == darktable {
     [dark] .table {
       @each $property, $value in $prop {
         #{$property}: #{$value};
       }
-    } 
+    }
   } @else if #{$class} == darkthead {
     [dark] .thead {
       @each $property, $value in $prop {
@@ -258,20 +198,54 @@
   }
 }
 
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
 /*************/
 /* Forms CSS */
 /*************/
 @each $class, $prop in $forms {
-  @if (str-index(#{$class}, "-dark")!=null) {
-    // Remove -dark from #{$class}
-    $replaced: str-replace($class, "-dark", "");
-    [dark] #{$replaced} {
+  @if (str-index(#{$class}, "-dark") !=null) {
+    $darkclass: str-replace($class, "-dark", "");
+    @if #{$darkclass} == form-checkbox-checked {
+    } @else {
+      [dark] .#{$darkclass} {
+        @each $property, $value in $prop {
+          #{$property}: #{$value};
+        }
+      }
+    }
+  } @else if (str-index(#{$class}, "-after") !=null) {
+    $after: str-replace($class, "-after", "::after");
+    .#{$after} {
       @each $property, $value in $prop {
         #{$property}: #{$value};
       }
     }
-  } @else {
+  } @else if(str-index(#{$class}, "-checked") == null) {
     .#{$class} {
+      @each $property, $value in $prop {
+        #{$property}: #{$value};
+      }
+    }
+  }
+
+  @if #{$class} == form-checkbox-checked {
+    .form-checkbox:checked {
+      @each $property, $value in $prop {
+        #{$property}: #{$value};
+      }
+    }
+  } @else if #{$class} == form-checkbox-checked-dark {
+    [dark] .form-checkbox:checked {
       @each $property, $value in $prop {
         #{$property}: #{$value};
       }

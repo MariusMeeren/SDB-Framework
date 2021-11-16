@@ -1,17 +1,442 @@
-/* Error: expected selector.
- *     ,
- * 268 |     [dark] str-replace(form-input-dark, "-dark", ""){
- *     |                       ^
- *     '
- *   src\scss\utilities.scss 268:23  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected selector.\a     \2577 \a 268 \2502      [dark] str-replace(form-input-dark, "-dark", ""){\d\a     \2502                        ^\a     \2575 \a   src\\scss\\utilities.scss 268:23  root stylesheet';
+/* My most used Font Families all styles */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital@1&display=swap");
+/*******************/
+/*  CSS Utilities  */
+/*******************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+:root {
+  /* Palette */
+  --clr-light-primary-background: #e9eaec;
+  --clr-light-primary-overlay: white;
+  --clr-light-primary-titles: black;
+  --clr-light-secondary-background: #eff1f5;
+  --clr-light-secondary-overlay: white;
+  --clr-light-secondary-titles: #173254;
+  --clr-dark-primary-background: #274754;
+  --clr-dark-primary-overlay: #2a3037;
+  --clr-dark-primary-text: #b1b8be;
+  --clr-dark-primary-navigation: #2c3e4e;
+  --clr-dark-secondary-background: #323743;
+  --clr-dark-secondary-overlay: #272b34;
+  --clr-dark-secondary-text: #b1b8be;
+  --clr-dark-secondary-navigation: #2c3e4e;
+  --clr-extra-error: #fb3741;
+  /*****************/
+  /* Font Families */
+  /*****************/
+  --font-roboto: "roboto", sans-serif;
+  --font-poppins: "poppins", sans-serif;
+}
+
+/******************/
+/* Typography CSS */
+/******************/
+.text-thin {
+  font-weight: 100;
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-black {
+  font-weight: 900;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/***************/
+/* Flexbox CSS */
+/***************/
+.flex {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-0 {
+  flex: 0!important;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+/***************/
+/* Columns CSS */
+/***************/
+.col-25 {
+  flex: 25%;
+  max-width: 25%;
+}
+
+.col-33 {
+  flex: 33%;
+  max-width: 33%;
+}
+
+.col-50 {
+  flex: 50%;
+  max-width: 50%;
+}
+
+.col-66 {
+  flex: 66%;
+  max-width: 66%;
+}
+
+.col-75 {
+  flex: 75%;
+  max-width: 75%;
+}
+
+.col-100 {
+  flex: 100%;
+  max-width: 100%;
+}
+
+/************/
+/* Grid CSS */
+/************/
+.grid {
+  display: grid;
+}
+
+.grid-template {
+  grid-template-columns: repeat("1, 1fr");
+}
+
+/*********************/
+/* Light Theme Cards */
+/*********************/
+/* If parent card has a child card */
+.card-body > .card {
+  background-color: var(--clr-light-primary-background);
+}
+
+.card {
+  padding: 10px;
+  margin: 10px;
+  background-color: var(--clr-light-primary-overlay);
+}
+
+.card-header {
+  margin: 10px;
+}
+
+.card-title {
+  color: var(--clr-light-primary-titles);
+}
+
+.card-body {
+  padding: 10px;
+}
+
+/********************/
+/* Dark Theme Cards */
+/********************/
+[dark] {
+  background-color: var(--clr-dark-primary-background);
+}
+
+/* If parent card has a child card */
+[dark] .card-body > .card {
+  background-color: var(--clr-dark-primary-background);
+}
+
+[dark] .card {
+  background-color: var(--clr-dark-primary-overlay);
+}
+
+[dark] .card-title {
+  color: var(--clr-dark-primary-text);
+}
+
+/* If parent card has a child card */
+[dark] .card-body-body > .card-body {
+  background-color: var(--clr-dark-primary-background);
+}
+
+[dark] .card-body {
+  padding: 10px;
+}
+
+/*****************************/
+/* Universal Card Properties */
+/*****************************/
+.sm-rounded {
+  border-radius: .125rem;
+}
+
+.md-rounded {
+  border-radius: .375rem;
+}
+
+.lg-rounded {
+  border-radius: 0.5rem;
+}
+
+.shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+/**************/
+/* Tables CSS */
+/**************/
+.table {
+  display: table;
+  color: var(--clr-light-primary-text);
+  width: 100%;
+  border-radius: 10px;
+  border-collapse: collapse;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 1%);
+  overflow: hidden;
+}
+
+[dark] .table {
+  display: table;
+  color: var(--clr-dark-primary-text);
+  width: 100%;
+  border-radius: 10px;
+  border-collapse: collapse;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 1%);
+  overflow: hidden;
+}
+
+.thead {
+  background-color: var(--clr-light-primary-background);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+[dark] .thead {
+  background-color: var(--clr-dark-primary-background);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.td {
+  padding: 0.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[dark] .td {
+  color: var(--clr-dark-primary-text);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.th {
+  padding: 0.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.condensed {
+  padding: 0.2em;
+}
+
+/*************/
+/* Forms CSS */
+/*************/
+.form-label {
+  color: var(--clr-light-primary-titles);
+}
+
+[dark] .form-label {
+  color: var(--clr-dark-primary-text);
+}
+
+.form-input {
+  display: block;
+  width: 95%;
+  height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  background: var(--clr-light-primary-background);
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+}
+
+[dark] .form-input {
+  background: var(--clr-dark-primary-background);
+}
+
+.form-textarea {
+  height: 150px;
+  resize: none;
+}
+
+.form-checkbox {
+  -webkit-appearance: none;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: 3px solid var(--clr-light-primary-background);
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  position: relative;
+  color: var(--clr-light-primary-titles);
+}
+
+[dark] .form-checkbox {
+  border: 3px solid var(--clr-dark-primary-background);
+  color: var(--clr-dark-primary-text);
+}
+
+.form-checkbox::after {
+  content: attr(value);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.form-checkbox:checked {
+  background-color: var(--clr-light-primary-background);
+}
+
+[dark] .form-checkbox:checked {
+  background-color: var(--clr-dark-primary-background);
+}
+
+/*****************/
+/* Media Queries */
+/*****************/
+/* Max-Width 65em */
+@media only screen and (max-width: 65em) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col-25 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .col-33 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .col-50 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .col-66 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .col-75 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .col-100 {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+/* Max-Width 40em */
+@media only screen and (max-width: 40em) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col-25 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .col-33 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .col-50 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .col-66 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .col-75 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .col-100 {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+/**************/
+/* Charts CSS */
+/**************/
+.pie-chart {
+  background: conic-gradient(#F15854 4%, #4D4D4D 0 8%, #5DA5DA 0 17%, #DECF3F 0 48%, #B276B2 0 59%, #FAA43A 0);
+  border-radius: 50%;
+  width: 50%;
+  padding-top: 50%;
+  margin: 2.5em auto;
+}
+
+/*# sourceMappingURL=utilities.css.map */

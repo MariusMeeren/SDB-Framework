@@ -3,7 +3,12 @@ $forms: (
     form-row: (),
     form-column: (),
     form-group: (),
-    form-label: (),
+    form-label: (
+        color: var(--clr-light-primary-titles),
+    ),
+    form-label-dark: (
+        color: var(--clr-dark-primary-text),
+    ),
     form-input: (
         display: block,
         width: 95%,
@@ -22,6 +27,7 @@ $forms: (
     ),
     form-textarea: (
         height: 150px,
+        resize: none,
     ),
     form-select: (),
     form-checkbox: (
@@ -48,6 +54,12 @@ $forms: (
         transform: translate(-50%, -50%),
         font-size: 16px,
         text-transform: uppercase,
+    ),
+    form-checkbox-checked: (
+        background-color: var(--clr-light-primary-background),
+    ),
+    form-checkbox-checked-dark: (
+        background-color: var(--clr-dark-primary-background),
     ),
     form-radio: (),
     form-submit: (),
