@@ -1,7 +1,7 @@
 $tables: (
     table: (
         display: table,
-        color: var(--clr-light-primary-text),
+        color: var(--light-text),
         width: 100%,
         border-radius: 10px,
         border-collapse: collapse,
@@ -10,7 +10,7 @@ $tables: (
     ),
     darktable: (
         display: table,
-        color: var(--clr-dark-primary-text),
+        color: var(--dark-text),
         width: 100%,
         border-radius: 10px,
         border-collapse: collapse,
@@ -18,11 +18,11 @@ $tables: (
         overflow: hidden,
     ),
     thead: (
-        background-color: var(--clr-light-primary-background),
+        background-color: var(--light-bg),
         border-bottom: 1px solid rgba(000, 000, 000, 0.2),
     ),
     darkthead: (
-        background-color: var(--clr-dark-primary-background),
+        background-color: var(--dark-bg),
         border-bottom: 1px solid rgba(255, 255, 255, 0.2),
     ),
     td: (
@@ -30,7 +30,7 @@ $tables: (
         border-bottom: 1px solid rgba(255, 255, 255, 0.2),
     ),
     darktd: (
-        color: var(--clr-dark-primary-text),
+        color: var(--dark-text),
         border-bottom: 1px solid rgba(000, 000, 000, 0.2),
     ),
     th: (

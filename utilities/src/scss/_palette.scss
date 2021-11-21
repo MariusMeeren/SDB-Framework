@@ -1,27 +1,12 @@
 $palette: (
-    light-primary: (
-        background: hsl(220, 8%, 92%),
+    light: (
+        bg: hsl(220, 8%, 92%),
         overlay: hsl(0, 0%, 100%),
-        titles: hsl(0, 0%, 0%),
+        text: hsl(0, 0%, 0%),
     ),
-    light-secondary: (
-        background: hsl(220, 23%, 95%),
-        overlay: hsl(0, 0%, 100%),
-        titles: hsl(213, 57%, 21%),
-    ),
-    dark-primary: (
-        background: hsl(197, 37%, 24%),
-        overlay: hsl(212, 14%, 19%),
+    dark: (
+        bg: hsl(219, 24%, 11%),
+        overlay: hsl(214, 24%, 17%),
         text: hsl(208, 9%, 72%),
-        navigation: hsl(208, 28%, 24%),
-    ),
-    dark-secondary: (
-        background: hsl(222, 15%, 23%),
-        overlay: hsl(222, 14%, 18%),
-        text: hsl(208, 9%, 72%),
-        navigation: hsl(208, 28%, 24%),
-    ),
-    extra: (
-        error: hsl(357, 96%, 60%),
     ),
 );

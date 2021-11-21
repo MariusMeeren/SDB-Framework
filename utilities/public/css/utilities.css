@@ -12,21 +12,12 @@
 
 :root {
   /* Palette */
-  --clr-light-primary-background: #e9eaec;
-  --clr-light-primary-overlay: white;
-  --clr-light-primary-titles: black;
-  --clr-light-secondary-background: #eff1f5;
-  --clr-light-secondary-overlay: white;
-  --clr-light-secondary-titles: #173254;
-  --clr-dark-primary-background: #274754;
-  --clr-dark-primary-overlay: #2a3037;
-  --clr-dark-primary-text: #b1b8be;
-  --clr-dark-primary-navigation: #2c3e4e;
-  --clr-dark-secondary-background: #323743;
-  --clr-dark-secondary-overlay: #272b34;
-  --clr-dark-secondary-text: #b1b8be;
-  --clr-dark-secondary-navigation: #2c3e4e;
-  --clr-extra-error: #fb3741;
+  --light-bg: #e9eaec;
+  --light-overlay: white;
+  --light-text: black;
+  --dark-bg: #151a23;
+  --dark-overlay: #212a36;
+  --dark-text: #b1b8be;
   /*****************/
   /* Font Families */
   /*****************/
@@ -166,13 +157,13 @@
 /*********************/
 /* If parent card has a child card */
 .card-body > .card {
-  background-color: var(--clr-light-primary-background);
+  background-color: var(--light-bg);
 }
 
 .card {
   padding: 10px;
   margin: 10px;
-  background-color: var(--clr-light-primary-overlay);
+  background-color: var(--light-overlay);
 }
 
 .card-header {
@@ -180,7 +171,7 @@
 }
 
 .card-title {
-  color: var(--clr-light-primary-titles);
+  color: var(--light-text);
 }
 
 .card-body {
@@ -191,7 +182,7 @@
 /* Dark Theme Cards */
 /********************/
 [dark] {
-  background-color: var(--clr-dark-primary-background);
+  background-color: var(--dark-bg);
 }
 
 /* If parent card has a child card */
@@ -200,11 +191,11 @@
 }
 
 [dark] .card {
-  background-color: var(--clr-dark-primary-overlay);
+  background-color: var(--dark-overlay);
 }
 
 [dark] .card-title {
-  color: var(--clr-dark-primary-text);
+  color: var(--dark-text);
 }
 
 /* If parent card has a child card */
@@ -240,7 +231,7 @@
 /**************/
 .table {
   display: table;
-  color: var(--clr-light-primary-text);
+  color: var(--light-text);
   width: 100%;
   border-radius: 10px;
   border-collapse: collapse;
@@ -250,7 +241,7 @@
 
 [dark] .table {
   display: table;
-  color: var(--clr-dark-primary-text);
+  color: var(--dark-text);
   width: 100%;
   border-radius: 10px;
   border-collapse: collapse;
@@ -259,12 +250,12 @@
 }
 
 .thead {
-  background-color: var(--clr-light-primary-background);
+  background-color: var(--light-bg);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 [dark] .thead {
-  background-color: var(--clr-dark-primary-background);
+  background-color: var(--dark-bg);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -274,7 +265,7 @@
 }
 
 [dark] .td {
-  color: var(--clr-dark-primary-text);
+  color: var(--dark-text);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -291,12 +282,12 @@
 /* Forms CSS */
 /*************/
 .form-label {
-  color: var(--clr-light-primary-titles);
+  color: var(--light-text);
   margin-top: 1em;
 }
 
 [dark] .form-label {
-  color: var(--clr-dark-primary-text);
+  color: var(--dark-text);
 }
 
 .form-input {
@@ -304,7 +295,7 @@
   width: 95%;
   padding: 10px;
   border-radius: 5px;
-  background: var(--clr-light-primary-background);
+  background: var(--light-bg);
   border: none;
   outline: none;
   color: #fff;
@@ -313,7 +304,7 @@
 }
 
 [dark] .form-input {
-  background: var(--clr-dark-primary-background);
+  background: var(--dark-bg);
 }
 
 .form-textarea {
@@ -326,16 +317,16 @@
   width: 100px;
   height: 35px;
   border-radius: 5px;
-  border: 3px solid var(--clr-light-primary-background);
+  border: 3px solid var(--light-bg);
   cursor: pointer;
   margin-right: 10px;
   position: relative;
-  color: var(--clr-light-primary-titles);
+  color: var(--light-text);
 }
 
 [dark] .form-checkbox {
-  border: 3px solid var(--clr-dark-primary-background);
-  color: var(--clr-dark-primary-text);
+  border: 3px solid var(--dark-bg);
+  color: var(--dark-text);
 }
 
 .form-checkbox:after {
@@ -349,12 +340,12 @@
 }
 
 .form-checkbox:checked {
-  background-color: var(--clr-light-primary-background);
+  background-color: var(--light-bg);
 }
 
 [dark] .form-checkbox:checked {
-  background-color: var(--clr-dark-primary-navigation);
-  border: 3px solid var(--clr-dark-primary-navigation);
+  background-color: var(--dark-bg);
+  border: 3px solid var(--dark-bg);
 }
 
 .form-submit {
@@ -365,7 +356,7 @@
   padding: 10px;
   margin-top: 1em;
   border-radius: 5px;
-  background: var(--clr-dark-primary-background);
+  background: var(--dark-bg);
   border: none;
   outline: none;
   text-transform: capitalize;
@@ -384,7 +375,7 @@
 .form-upload-label {
   width: 100%;
   height: 100px;
-  background: var(--clr-dark-primary-background);
+  background: var(--dark-bg);
   cursor: pointer;
   background-size: cover;
   transition: background 0.2s ease;
@@ -399,7 +390,7 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  color: var(--clr-dark-primary-text);
+  color: var(--dark-text);
 }
 
 .form-upload-label:hover {

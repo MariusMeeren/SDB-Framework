@@ -23,7 +23,7 @@
   /* Palette */
   @each $category, $color in $palette {
     @each $shade, $value in $color {
-      --clr-#{$category}-#{$shade}: #{$value};
+      --#{$category}-#{$shade}: #{$value};
     }
   }
 
@@ -121,7 +121,7 @@
   @if #{$class} == card {
     /* If parent card has a child card */
     .#{$class}-body > .#{$class} {
-      background-color: var(--clr-light-primary-background);
+      background-color: var(--light-bg);
     }
   }
   .#{$class} {

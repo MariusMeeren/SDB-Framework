@@ -2,13 +2,13 @@ $lightcards: (
     card: (
         padding: '10px',
         margin: '10px',
-        background-color: 'var(--clr-light-primary-overlay)',
+        background-color: 'var(--light-overlay)',
     ),
     card-header: (
         margin: '10px',
     ),
     card-title: (
-        color: 'var(--clr-light-primary-titles)',
+        color: 'var(--light-text)',
     ),
     card-body: (
         padding: '10px',
@@ -17,13 +17,13 @@ $lightcards: (
 
 $darkmode: (
     dark: (
-        background-color: 'var(--clr-dark-primary-background)',
+        background-color: 'var(--dark-bg)',
     ),
     card: (
-        background-color: 'var(--clr-dark-primary-overlay)',
+        background-color: 'var(--dark-overlay)',
     ),
     card-title: (
-        color: 'var(--clr-dark-primary-text)',
+        color: 'var(--dark-text)',
     ),
     card-body: (
         padding:'10px',

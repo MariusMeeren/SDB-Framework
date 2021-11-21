@@ -4,18 +4,18 @@ $forms: (
     form-column: (),
     form-group: (),
     form-label: (
-        color: var(--clr-light-primary-titles),
+        color: var(--light-text),
         margin-top: 1em,
     ),
     form-label-dark: (
-        color: var(--clr-dark-primary-text),
+        color: var(--dark-text),
     ),
     form-input: (
         display: block,
         width: 95%,
         padding: 10px,
         border-radius: 5px,
-        background: var(--clr-light-primary-background),
+        background: var(--light-bg),
         border: none,
         outline: none,
         color: #fff,
@@ -23,7 +23,7 @@ $forms: (
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01),
     ),
     form-input-dark: (
-        background: var(--clr-dark-primary-background),
+        background: var(--dark-bg),
     ),
     form-textarea: (
         height: 100%,
@@ -35,15 +35,15 @@ $forms: (
         width: 100px,
         height: 35px,
         border-radius: 5px,
-        border: 3px solid var(--clr-light-primary-background),
+        border: 3px solid var(--light-bg),
         cursor: pointer,
         margin-right: 10px,
         position: relative,
-        color: var(--clr-light-primary-titles),
+        color: var(--light-text),
     ),
     form-checkbox-dark: (
-        border: 3px solid var(--clr-dark-primary-background),
-        color: var(--clr-dark-primary-text),
+        border: 3px solid var(--dark-bg),
+        color: var(--dark-text),
     ),
     form-checkbox-after: (
         content: attr(value),
@@ -55,11 +55,11 @@ $forms: (
         text-transform: uppercase,
     ),
     form-checkbox-checked: (
-        background-color: var(--clr-light-primary-background),
+        background-color: var(--light-bg),
     ),
     form-checkbox-checked-dark: (
-        background-color: var(--clr-dark-primary-navigation),
-        border: 3px solid var(--clr-dark-primary-navigation),
+        background-color: var(--dark-bg),
+        border: 3px solid var(--dark-bg),
     ),
     form-radio: (),
     form-submit: (
@@ -70,7 +70,7 @@ $forms: (
         padding: 10px,
         margin-top: 1em,
         border-radius: 5px,
-        background: var(--clr-dark-primary-background),
+        background: var(--dark-bg),
         border: none,
         outline: none,
         text-transform: capitalize,
@@ -88,7 +88,7 @@ $forms: (
     form-upload-label: (
         width: 100%,
         height: 100px,
-        background: var(--clr-dark-primary-background),
+        background: var(--dark-bg),
         cursor: pointer,
         background-size: cover,
         transition: background 0.2s ease,
@@ -102,7 +102,7 @@ $forms: (
         text-align: center,
         display: flex,
         justify-content: center,
-        color: var(--clr-dark-primary-text),
+        color: var(--dark-text),
     ),
     form-upload-label-hover: (
         background: var(--clr-dark-secondary-background),
