@@ -3,6 +3,9 @@ $lightcards: (
         padding: '10px',
         margin: '10px',
         background-color: 'var(--light-overlay)',
+        z-index: '1',
+        overflow: 'hidden',
+        position: 'relative',
     ),
     card-header: (
         margin: '10px',
