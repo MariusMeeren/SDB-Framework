@@ -13,6 +13,17 @@
 @use "forms" as *;
 @use "tables" as *;
 
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -118,12 +129,6 @@
 /* Light Theme Cards */
 /*********************/
 @each $class, $prop in $lightcards {
-  @if #{$class} == card {
-    /* If parent card has a child card */
-    .#{$class}-body > .#{$class} {
-      background-color: var(--light-bg);
-    }
-  }
   .#{$class} {
     @each $property, $value in $prop {
       #{$property}: #{$value};
@@ -135,12 +140,6 @@
 /* Dark Theme Cards */
 /********************/
 @each $class, $prop in $darkmode {
-  @if #{$class} == card or #{$class} == card-body {
-    /* If parent card has a child card */
-    [dark] .#{$class}-body > .#{$class} {
-      background-color: var(--clr-dark-primary-background);
-    }
-  }
   @if #{$class} == dark {
     [#{$class}] {
       @each $property, $value in $prop {
@@ -160,9 +159,18 @@
 /* Universal Card Properties */
 /*****************************/
 @each $class, $prop in $universalcards {
-  .#{$class} {
-    @each $property, $value in $prop {
-      #{$property}: #{$value};
+  @if (str-index(#{$class}, "-dark") !=null) {
+    $darkclass: str-replace($class, "-dark", "");
+    [dark] .#{$darkclass} {
+      @each $property, $value in $prop {
+        #{$property}: #{$value};
+      }
+    }
+  } @else {
+    .#{$class} {
+      @each $property, $value in $prop {
+        #{$property}: #{$value};
+      }
     }
   }
 }
@@ -198,17 +206,6 @@
   }
 }
 
-@function str-replace($string, $search, $replace: "") {
-  $index: str-index($string, $search);
-
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace +
-      str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-  }
-
-  @return $string;
-}
-
 /*************/
 /* Forms CSS */
 /*************/
@@ -235,8 +232,8 @@
     .#{$after} {
       @each $property, $value in $prop {
         @if $property == content {
-          #{$property}: '#{$value}';
-        } @else  {
+          #{$property}: "#{$value}";
+        } @else {
           #{$property}: #{$value};
         }
       }

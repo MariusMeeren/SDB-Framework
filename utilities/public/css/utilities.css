@@ -12,12 +12,12 @@
 
 :root {
   /* Palette */
-  --light-bg: #e9eaec;
+  --light-bg: #f9f9fa;
   --light-overlay: white;
-  --light-text: black;
-  --dark-bg: #151a23;
-  --dark-overlay: #212a36;
-  --dark-text: #b1b8be;
+  --light-text: #45545f;
+  --dark-bg: #212121;
+  --dark-overlay: #2e2e2e;
+  --dark-text: #bababa;
   /*****************/
   /* Font Families */
   /*****************/
@@ -155,11 +155,6 @@
 /*********************/
 /* Light Theme Cards */
 /*********************/
-/* If parent card has a child card */
-.card-body > .card {
-  background-color: var(--light-bg);
-}
-
 .card {
   padding: 10px;
   margin: 10px;
@@ -185,22 +180,12 @@
   background-color: var(--dark-bg);
 }
 
-/* If parent card has a child card */
-[dark] .card-body > .card {
-  background-color: var(--clr-dark-primary-background);
-}
-
 [dark] .card {
   background-color: var(--dark-overlay);
 }
 
 [dark] .card-title {
   color: var(--dark-text);
-}
-
-/* If parent card has a child card */
-[dark] .card-body-body > .card-body {
-  background-color: var(--clr-dark-primary-background);
 }
 
 [dark] .card-body {
@@ -222,8 +207,16 @@
   border-radius: 0.5rem;
 }
 
+.xl-rounded {
+  border-radius: 1rem;
+}
+
 .shadow {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+[dark] .shadow {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
 }
 
 /**************/
