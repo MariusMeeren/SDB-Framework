@@ -212,7 +212,14 @@
 @each $class, $prop in $forms {
   @if (str-index(#{$class}, "-dark") !=null) {
     $darkclass: str-replace($class, "-dark", "");
-    @if #{$darkclass} == form-checkbox-checked {
+    @if (str-index(#{$darkclass}, "-before") !=null) {
+      $after: str-replace($darkclass, "-before", ":before");
+      [dark] .#{$after} {
+        @each $property, $value in $prop {
+          #{$property}: #{$value};
+        }
+      }
+    } @else if #{$darkclass} == form-checkbox-checked {
     } @else {
       [dark] .#{$darkclass} {
         @each $property, $value in $prop {
