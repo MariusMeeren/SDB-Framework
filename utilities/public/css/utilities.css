@@ -12,8 +12,8 @@
 
 :root {
   /* Palette */
-  --light-bg: #f9f9fa;
-  --light-overlay: whitesmoke;
+  --light-bg: #e6e6e6;
+  --light-overlay: white;
   --light-text: #45545f;
   --dark-bg: #212121;
   --dark-overlay: #2e2e2e;
