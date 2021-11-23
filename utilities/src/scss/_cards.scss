@@ -1,55 +1,55 @@
 $lightcards: (
     card: (
-        padding: '10px',
-        margin: '10px',
-        background-color: 'var(--light-overlay)',
-        z-index: '1',
-        overflow: 'hidden',
-        position: 'relative',
+        padding: "10px",
+        margin: "10px",
+        background-color: "var(--light-overlay)",
+        z-index: "1",
+        overflow: "hidden",
+        position: "relative",
     ),
     card-header: (
-        margin: '10px',
+        margin: "10px",
     ),
     card-title: (
-        color: 'var(--light-text)',
+        color: "var(--light-text)",
     ),
     card-body: (
-        padding: '10px',
+        padding: "10px",
     ),
 );
 
 $darkmode: (
     dark: (
-        background-color: 'var(--dark-bg)',
+        background: "linear-gradient(300deg, var(--dark-bg), var(--dark-overlay))",
     ),
     card: (
-        background-color: 'var(--dark-overlay)',
+        background-color: "var(--dark-overlay)",
     ),
     card-title: (
-        color: 'var(--dark-text)',
+        color: "var(--dark-text)",
     ),
     card-body: (
-        padding:'10px',
+        padding: "10px",
     ),
 );
 
 $universalcards: (
     sm-rounded: (
-        border-radius: '.125rem',
+        border-radius: ".125rem",
     ),
     md-rounded: (
-        border-radius: '.375rem',
+        border-radius: ".375rem",
     ),
     lg-rounded: (
-        border-radius: '0.5rem',
+        border-radius: "0.5rem",
     ),
     xl-rounded: (
-        border-radius: '1rem',
+        border-radius: "1rem",
     ),
     shadow: (
-        box-shadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
+        box-shadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
     ),
     shadow-dark: (
-        box-shadow: 'rgba(0, 0, 0, 0.2) 0px 5px 10px',
+        box-shadow: "rgba(0, 0, 0, 0.2) 0px 5px 10px",
     ),
 );

@@ -180,7 +180,7 @@
 /* Dark Theme Cards */
 /********************/
 [dark] {
-  background-color: var(--dark-bg);
+  background: linear-gradient(300deg, var(--dark-bg), var(--dark-overlay));
 }
 
 [dark] .card {
