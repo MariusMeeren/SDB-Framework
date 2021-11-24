@@ -1,11 +1,11 @@
 $palette: (
     light: (
-        bg: hsl(0, 0%, 90%),
-        overlay: hsl(0, 0%, 100%),
-        text: hsl(204, 16%, 32%),
+        bg: hsl(300, 11%, 96%),
+        overlay: hsl(300, 2%, 92%),
+        text: hsl(0, 0%, 0%), /* #45545f */
     ),
     dark: (
-        bg: hsl(0, 0%, 13%),
+        bg: hsl(0, 0%, 16%),
         overlay: hsl(0, 0%, 18%),
         text: hsl(0, 0%, 73%),
     ),

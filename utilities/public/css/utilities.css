@@ -13,10 +13,10 @@
 
 :root {
   /* Palette */
-  --light-bg: #e6e6e6;
-  --light-overlay: white;
-  --light-text: #45545f;
-  --dark-bg: #212121;
+  --light-bg: #f6f4f6;
+  --light-overlay: #ebeaeb;
+  --light-text: black;
+  --dark-bg: #292929;
   --dark-overlay: #2e2e2e;
   --dark-text: #bababa;
   /*****************/
@@ -217,7 +217,7 @@
 }
 
 .shadow {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
 }
 
 [dark] .shadow {
