@@ -13,8 +13,8 @@
 
 :root {
   /* Palette */
-  --light-bg: #f6f4f6;
-  --light-overlay: #ebeaeb;
+  --light-bg: whitesmoke;
+  --light-overlay: white;
   --light-text: black;
   --dark-bg: #292929;
   --dark-overlay: #2e2e2e;
