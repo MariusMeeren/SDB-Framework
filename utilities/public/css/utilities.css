@@ -17,8 +17,8 @@
   --light-overlay: white;
   --light-text: black;
   --light-input: #ededed;
-  --dark-bg: #292929;
-  --dark-overlay: #2e2e2e;
+  --dark-bg: #121212;
+  --dark-overlay: #212121;
   --dark-text: #bababa;
   /*****************/
   /* Font Families */
@@ -183,7 +183,7 @@
 /* Dark Theme Cards */
 /********************/
 [dark] {
-  background: linear-gradient(300deg, var(--dark-bg), var(--dark-overlay));
+  background: var(--dark-bg);
 }
 
 [dark] .card {

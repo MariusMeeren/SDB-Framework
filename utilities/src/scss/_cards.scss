@@ -20,7 +20,7 @@ $lightcards: (
 
 $darkmode: (
     dark: (
-        background: "linear-gradient(300deg, var(--dark-bg), var(--dark-overlay))",
+        background: "var(--dark-bg)",
     ),
     card: (
         background-color: "var(--dark-overlay)",
