@@ -118,7 +118,7 @@ $forms: (
         color: var(--dark-text),
     ),
     form-upload-label-hover: (
-        background: var(--clr-dark-secondary-background),
+        filter: opacity(0.7),
     ),
     form-file: (),
     form-help: (),

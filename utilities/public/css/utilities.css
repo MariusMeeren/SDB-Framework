@@ -409,7 +409,7 @@
 }
 
 .form-upload-label:hover {
-  background: var(--clr-dark-secondary-background);
+  filter: opacity(0.7);
 }
 
 /*****************/
