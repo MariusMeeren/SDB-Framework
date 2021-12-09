@@ -16,6 +16,24 @@ $flex-classes: (
   grow: (
     flex-grow: "1",
   ),
+  row-gap-s: (
+    row-gap: "1rem",
+  ),
+  row-gap-m: (
+    row-gap: "2rem",
+  ),
+  row-gap-l: (
+    row-gap: "3rem",
+  ),
+  column-gap-s: (
+    column-gap: "1rem",
+  ),
+  column-gap-m: (
+    column-gap: "2rem",
+  ),
+  column-gap-l: (
+    column-gap: "3rem",
+  ),
   wrap: (
     flex-wrap: "wrap",
   ),
