@@ -267,7 +267,6 @@
   width: 100%;
   border-radius: 10px;
   border-collapse: collapse;
-  box-shadow: 0 4px 10px rgb(0 0 0 / 1%);
   overflow: hidden;
 }
 
@@ -277,7 +276,6 @@
   width: 100%;
   border-radius: 10px;
   border-collapse: collapse;
-  box-shadow: 0 4px 10px rgb(0 0 0 / 1%);
   overflow: hidden;
 }
 
