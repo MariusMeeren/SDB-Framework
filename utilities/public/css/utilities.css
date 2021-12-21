@@ -13,7 +13,7 @@
 
 :root {
   /* Palette */
-  --light-bg: #f7f7f7;
+  --light-bg: #dee5e8;
   --light-overlay: white;
   --light-text: black;
   --light-input: #ededed;
@@ -267,7 +267,6 @@
   width: 100%;
   border-radius: 10px;
   border-collapse: collapse;
-  box-shadow: 0 4px 10px rgb(0 0 0 / 1%);
   overflow: hidden;
 }
 
